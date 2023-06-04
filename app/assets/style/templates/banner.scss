@@ -12,6 +12,8 @@
   flex-direction: column;
   margin-bottom: 20px;
   color: $deep-blue;
+  position: relative;
+  z-index: 10;
 
   p {
     span {
@@ -67,7 +69,7 @@
 
 .banner__options {
   display: grid;
-  grid-template-columns: repeat(3, 373px);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   position: relative;
   z-index: 10;
@@ -100,6 +102,11 @@
   color: $deep-blue;
   position: relative;
   z-index: 1;
+  
+  @media (min-width: 992px) and (max-width: 1080px) {
+    font-size: 16px;
+    line-height: 18px;
+  }
 
   span {
     color: $red;

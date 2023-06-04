@@ -461,7 +461,9 @@ main {
   -ms-flex-direction: column;
   flex-direction: column;
   margin-bottom: 20px;
-  color: #2e3152
+  color: #2e3152;
+  position: relative;
+  z-index: 10
 }
 .banner__title p span {
   color: #e30613
@@ -520,8 +522,8 @@ main {
 .banner__options {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (373px)[3];
-  grid-template-columns: repeat(3,373px);
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3,1fr);
   grid-gap: 20px;
   position: relative;
   z-index: 10
@@ -551,6 +553,12 @@ main {
   color: #2e3152;
   position: relative;
   z-index: 1
+}
+@media (min-width:992px) and (max-width:1080px) {
+  .banner__option-title {
+    font-size: 16px;
+    line-height: 18px
+  }
 }
 .banner__option-title span {
   color: #e30613

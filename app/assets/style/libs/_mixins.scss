@@ -112,3 +112,33 @@
 		@content;
 	}
 }
+
+@mixin mobile {
+	@media screen and (max-width: 480px){
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: 481px) and (max-width: 768px){
+		@content;
+	}
+}
+
+@mixin large-tablet {
+	@media (min-width: 481px) and (max-width: 768px){
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media (min-width: 1024px) and (max-width: 1440px){
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: 1440px) and (max-width: 1920px){
+		@content;
+	}
+}

@@ -122,10 +122,418 @@
     <img src="../assets/images/banner/banner-background2.png" alt="">
   </div>
 </section>
+  <section class="inspectors">
+  <div class="container">
+    <div class="inspectors__top">
+      <h2 class="inspectors__title">
+        Наши инструкторы <span>300 лет</span> за рулем <span>*</span>
+      </h2>
+      <p class="inspectors__description">
+        * общий стаж команды
+      </p>
+    </div>
 
+    <div class="inspectors__content">
+      <div class="inspectors__image">
+        <img src="" alt="">
+      </div>
 
+      <div class="inspectors__info">
+        <div class="inspectors__info__top">
+          <div class="inspectors__name"></div>
 
+          <div class="inspectors__experience">
+            <span class="inspectors__experience-label">Стаж работы: &nbsp;</span>
+            <span class="inspectors__experience__value"></span>
+          </div>
 
+          <div class="inspectors__description-text"></div>
+        </div>
+
+        <div class="inspectors__slider">
+          <div class="swiper-wrapper"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="tariff">
+  <div class="container">
+    <div class="tariff__top">
+      <h2 class="tariff__title">
+        <p>Тарифы на <span class="label">обучение</span></p>
+      </h2>
+    </div>
+
+    <div class="tariff__options">
+      <div class="tariff__option">
+        <div class="tariff__option-img">
+          <img src="../assets/images/tariff/car-a.png" alt="">
+        </div>
+        <div class="tariff__option-top">
+          <div class="tariff__option-title">
+            Категория <span>A + A1</span>
+          </div>
+          <div class="tariff__option-description">
+            Оффлайн формат
+          </div>
+        </div>
+        <div class="tariff__option-body">
+          <div class="tariff__option-body__title">
+            Доступные <span>опции:</span>
+          </div>
+
+          <div class="tariff__option-body__options">
+            <div class="tariff__checkbox">
+              <input id="A-prepayment" type="checkbox" checked onchange="changeATariffOptions(this.id, this.checked)">
+
+              <label class="tariff__checkbox-label" for="A-prepayment">
+                <div class="tariff__checkbox-icon">
+                  <img src="../assets/images/icons/checkbox-unchecked.svg" />
+                  <img src="../assets/images/icons/checnbox-checked.svg" />
+                </div>
+
+                <span>100% предоплата</span>
+              </label>
+            </div>
+            <div class="tariff__checkbox">
+              <input id="A-deduction" type="checkbox" checked onchange="changeATariffOptions(this.id, this.checked)">
+
+              <label class="tariff__checkbox-label" for="A-deduction">
+                <div class="tariff__checkbox-icon">
+                  <img src="../assets/images/icons/checkbox-unchecked.svg" />
+                  <img src="../assets/images/icons/checnbox-checked.svg" />
+                </div>
+
+                <span>С учетом налогового вычета</span>
+              </label>
+            </div>
+
+            <div class="tariff__checkbox">
+              <input id="A-friend" type="checkbox" onchange="changeATariffOptions(this.id, this.checked)">
+
+              <label class="tariff__checkbox-label" for="A-friend">
+                <div class="tariff__checkbox-icon">
+                  <img src="../assets/images/icons/checkbox-unchecked.svg" />
+                  <img src="../assets/images/icons/checnbox-checked.svg" />
+                </div>
+
+                <span>Я приду учиться с другом</span>
+              </label>
+            </div>
+            <div class="tariff__checkbox">
+              <input id="A-sale" type="checkbox" checked onchange="changeATariffOptions(this.id, this.checked)">
+
+              <label class="tariff__checkbox-label" for="A-sale">
+                <div class="tariff__checkbox-icon">
+                  <img src="../assets/images/icons/checkbox-unchecked.svg" />
+                  <img src="../assets/images/icons/checnbox-checked.svg" />
+                </div>
+
+                <span>Дополнительная скидка</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="tariff__option-body__bottom">
+            <p id="ATotalPrice" class="tariff__option-body__price"></p>
+            <p class="tariff__option-body__description">Срок обучения – 1,5 месяца</p>
+
+            <button class="tariff__option-body__btn btn btn_red">
+              Записаться
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="tariff__option">
+        <div class="tariff__option-img">
+          <img src="../assets/images/tariff/car-b.png" alt="">
+        </div>
+        <div class="tariff__option-top">
+          <div class="tariff__option-title">
+            Категория <span>B + B1</span>
+          </div>
+          <div class="tariff__option-description">
+            Оффлайн / онлайн формат
+          </div>
+        </div>
+        <div class="tariff__option-body">
+          <div class="tariff__option-body__title">
+            Доступные <span>опции:</span>
+          </div>
+
+          <div class="tariff__option-body__options">
+            <div class="tariff__checkbox">
+              <input id="B-prepayment" type="checkbox" checked onchange="changeBTariffOptions(this.id, this.checked)">
+
+              <label class="tariff__checkbox-label" for="B-prepayment">
+                <div class="tariff__checkbox-icon">
+                  <img src="../assets/images/icons/checkbox-unchecked.svg" />
+                  <img src="../assets/images/icons/checnbox-checked.svg" />
+                </div>
+
+                <span>100% предоплата</span>
+              </label>
+            </div>
+            <div class="tariff__checkbox">
+              <input id="B-deduction" type="checkbox" checked onchange="changeBTariffOptions(this.id, this.checked)">
+
+              <label class="tariff__checkbox-label" for="B-deduction">
+                <div class="tariff__checkbox-icon">
+                  <img src="../assets/images/icons/checkbox-unchecked.svg" />
+                  <img src="../assets/images/icons/checnbox-checked.svg" />
+                </div>
+
+                <span>С учетом налогового вычета</span>
+              </label>
+            </div>
+
+            <div class="tariff__checkbox">
+              <input id="B-friend" type="checkbox" checked onchange="changeBTariffOptions(this.id, this.checked)">
+
+              <label class="tariff__checkbox-label" for="B-friend">
+                <div class="tariff__checkbox-icon">
+                  <img src="../assets/images/icons/checkbox-unchecked.svg" />
+                  <img src="../assets/images/icons/checnbox-checked.svg" />
+                </div>
+
+                <span>Я приду учиться с другом</span>
+              </label>
+            </div>
+            <div class="tariff__checkbox">
+              <input id="B-sale" type="checkbox" checked onchange="changeBTariffOptions(this.id, this.checked)">
+
+              <label class="tariff__checkbox-label" for="B-sale">
+                <div class="tariff__checkbox-icon">
+                  <img src="../assets/images/icons/checkbox-unchecked.svg" />
+                  <img src="../assets/images/icons/checnbox-checked.svg" />
+                </div>
+
+                <span>Дополнительная скидка</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="tariff__option-body__bottom">
+            <p id="BTotalPrice" class="tariff__option-body__price"></p>
+            <p class="tariff__option-body__description">Срок обучения – 1,5 месяца</p>
+
+            <button class="tariff__option-body__btn btn btn_red">
+              Записаться
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="tariff__option">
+        <div class="tariff__option-img">
+          <img src="../assets/images/tariff/car-c.png" alt="">
+        </div>
+        <div class="tariff__option-top">
+          <div class="tariff__option-title">
+            Категория <span>C + C1</span>
+          </div>
+          <div class="tariff__option-description">
+            Оффлайн формат
+          </div>
+        </div>
+
+        <div class="tariff__option-body">
+          <div class="tariff__option-body__title">
+            Доступные <span>опции:</span>
+          </div>
+
+          <div class="tariff__option-body__options">
+            <div class="tariff__checkbox">
+              <input id="C-prepayment" type="checkbox" checked onchange="changeCTariffOptions(this.id, this.checked)">
+
+              <label class="tariff__checkbox-label" for="C-prepayment">
+                <div class="tariff__checkbox-icon">
+                  <img src="../assets/images/icons/checkbox-unchecked.svg" />
+                  <img src="../assets/images/icons/checnbox-checked.svg" />
+                </div>
+
+                <span>100% предоплата</span>
+              </label>
+            </div>
+            <div class="tariff__checkbox">
+              <input id="C-deduction" type="checkbox" checked onchange="changeCTariffOptions(this.id, this.checked)">
+
+              <label class="tariff__checkbox-label" for="C-deduction">
+                <div class="tariff__checkbox-icon">
+                  <img src="../assets/images/icons/checkbox-unchecked.svg" />
+                  <img src="../assets/images/icons/checnbox-checked.svg" />
+                </div>
+
+                <span>С учетом налогового вычета</span>
+              </label>
+            </div>
+
+            <div class="tariff__checkbox">
+              <input id="C-friend" type="checkbox" checked onchange="changeCTariffOptions(this.id, this.checked)">
+
+              <label class="tariff__checkbox-label" for="C-friend">
+                <div class="tariff__checkbox-icon">
+                  <img src="../assets/images/icons/checkbox-unchecked.svg" />
+                  <img src="../assets/images/icons/checnbox-checked.svg" />
+                </div>
+
+                <span>Я приду учиться с другом</span>
+              </label>
+            </div>
+            <div class="tariff__checkbox">
+              <input id="C-sale" type="checkbox" checked onchange="changeCTariffOptions(this.id, this.checked)">
+
+              <label class="tariff__checkbox-label" for="C-sale">
+                <div class="tariff__checkbox-icon">
+                  <img src="../assets/images/icons/checkbox-unchecked.svg" />
+                  <img src="../assets/images/icons/checnbox-checked.svg" />
+                </div>
+
+                <span>Дополнительная скидка</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="tariff__option-body__bottom">
+            <p id="CTotalPrice" class="tariff__option-body__price"></p>
+            <p class="tariff__option-body__description">Срок обучения – 1,5 месяца</p>
+
+            <button class="tariff__option-body__btn btn btn_red">
+              Записаться
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="sale">
+  <div class="container">
+    <div class="sale__form">
+      <h2 class="sale__title">
+        <p>Сэкономьте <span class="label">до 7 000 ₽</span></p>
+
+        <div class="sale__description">
+          Оставьте заявку и мы свяжемся c вами!
+        </div>
+      </h2>
+
+      <div class="sale__form-fields">
+        <div class="sale__form-field__row">
+          <input class="form-field__input" type="text" placeholder="Ваше имя">
+          <div class="sale__form-field__star">*</div>
+        </div>
+        <div class="sale__form-field__row">
+          <input class="form-field__input" type="text" placeholder="Ваш телефон">
+          <div class="sale__form-field__star">*</div>
+        </div>
+      </div>
+
+      <div class="sale__form-bottom">
+        <button class="sale__form-btn btn btn_green">
+          Оставить заявку
+        </button>
+
+        <div class="sale__form-bottom__description">
+          Нажимая на кнопку, вы даёте согласиена обработку <a href="">персональных данных</a> и соглашаетесь c
+          <a href="">с политикой конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+    <div class="sale__right">
+      <div class="sale__right-title">
+        В других автошколах вы будете доплачивать за:
+      </div>
+      <ul>
+        <li>возможность свободно выбиратьвремя практических занятий</li>
+        <li>доступ к онлайн-материалам (на случай, если вы пропустили очное занятие)</li>
+        <li>справку о прохождении медкомиссии</li>
+      </ul>
+
+      <p>У нас это <span class="label">бесплатно</span></p>
+      <p>+100% к удовольствию от вождения!</p>
+      <p>2 спец. занятия в подарок при 100% оплате <span>*</span></p>
+    </div>
+  </div>
+</section>
+  <section class="stocks">
+  <div class="container">
+    <div class="stocks__top">
+      <h2 class="stocks__title">
+        <p>Скидки и <span class="label">Акции</span></p>
+        <p>скидки суммируются</p>
+      </h2>
+    </div>
+
+    <div class="stocks__options">
+      <div class="stocks__option">
+        <div class="stocks__option-title">
+          <p>Приведи друга и получи скидку <span class="label">1 000 ₽</span> за каждого</p>
+        </div>
+
+        <div class="stocks__option-description">
+          При совместной запись
+        </div>
+
+        <button class="stocks__option-btn btn btn_red">
+          Записаться
+        </button>
+
+        <img src="../assets/images/stocks/mouthpiece.png" alt="">
+      </div>
+      <div class="stocks__option">
+        <div class="stocks__option-title">
+          <p>Оплата обучения <span class="label">в рассрочку</span></p>
+        </div>
+
+        <div class="stocks__option-description">
+          Вам не надо откладывать вопрос обучения и получения прав!
+        </div>
+
+        <button class="stocks__option-btn btn btn_red">
+          Записаться
+        </button>
+
+        <img src="../assets/images/stocks/wallet.png" alt="">
+      </div>
+      <div class="stocks__option">
+        <div class="stocks__option-title">
+          <p>Скидка именинникам <span class="label">2 000 ₽</span></p>
+        </div>
+
+        <div class="stocks__option-description">
+          10 дней до дня рождения <br> и 10 дней после
+        </div>
+
+        <button class="stocks__option-btn btn btn_red">
+          Записаться
+        </button>
+
+        <img src="../assets/images/stocks/cap.png" alt="">
+      </div>
+      <div class="stocks__option">
+        <div class="stocks__option-title">
+          <p>Оплата обучения в автошколе <span class="label">материнским капиталом</span></p>
+        </div>
+
+        <div class="stocks__option-description">
+          Обратитесь в любой из наших филиалов и заключите договор на обучение.
+        </div>
+
+        <button class="stocks__option-btn btn btn_red">
+          Записаться
+        </button>
+
+        <img src="../assets/images/stocks/pig.png" alt="">
+      </div>
+    </div>
+
+    <button class="stocks__other-btn btn btn_green">
+      Все скидки и акции
+    </button>
+  </div>
+</section>
   <section class="addresses">
   <div class="container">
     <div class="addresses__top">
@@ -197,8 +605,106 @@
     </div>
   </div>
 </section>
+  <section class="filial">
+  <div class="container">
+    <div class="filial__form">
+      <h2 class="filial__title">
+        <p>Не нашли нужный филиал? <span class="label">учитeсь онлайн</span></p>
 
+        <div class="filial__description">
+          Оставьте заявку и мы свяжемся c вами!
+        </div>
+      </h2>
 
+      <div class="filial__form-fields">
+        <div class="filial__form-field__row">
+          <input class="form-field__input" type="text" placeholder="Ваше имя">
+          <div class="filial__form-field__star">*</div>
+        </div>
+        <div class="filial__form-field__row">
+          <input class="form-field__input" type="text" placeholder="Ваш телефон">
+          <div class="filial__form-field__star">*</div>
+        </div>
+      </div>
+
+      <div class="filial__form-bottom">
+        <button class="filial__form-btn btn btn_green">
+          Оставить заявку
+        </button>
+
+        <div class="filial__form-bottom__description">
+          Нажимая на кнопку, вы даёте согласиена обработку <a href="">персональных данных</a> и соглашаетесь c
+          <a href="">с политикой конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="filial__img">
+      <img src="../assets/images/filial/filial-laptop.png" alt="" />
+    </div>
+  </div>
+</section>
+  <section class="reviews">
+  <div class="container">
+    <div class="reviews__top">
+      <h2 class="reviews__title">
+        <p>Что о нас <span class="label">говорят</span></p>
+      </h2>
+    </div>
+    <script src="https://res.smartwidgets.ru/app.js" defer></script>
+    <div class="sw-app" data-app="9485c8ad539e48d2d8a4e09212e64314" id="sw-app-9485c8ad539e48d2d8a4e09212e64314"></div>
+  </div>
+</section>
+  <section class="gallery">
+  <div class="container">
+    <h2 class="gallery__title">
+      <p>Автошкола в <span class="label">фотогалерее</span></p>
+    </h2>
+
+    <div class="gallery__wrapper">
+      <div class="gallery__left">
+        <div class="gallery__controls">
+          <div class="gallery__controls-option">
+            Инструкторы и авто
+          </div>
+          <div class="gallery__controls-option">
+            Учебные классы
+          </div>
+          <div class="gallery__controls-option">
+            Автодром
+          </div>
+        </div>
+
+        <div class="gallery__advantages">
+          <img src="../assets/images/gallery/gallery-advantages.png" alt="">
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur. Adipiscing turpis a non imperdiet elit donec ut habitant.
+          </p>
+        </div>
+
+        <a href="#" class="gallery__gallery-link btn btn_green">
+          Перейти в галерею
+        </a>
+      </div>
+
+      <div class="gallery__gallery">
+        <div class="gallery__gallery-slide">
+          <img src="" alt="" />
+        </div>
+        <div class="gallery__gallery-slide">
+          <img src="" alt="" />
+        </div>
+        <div class="gallery__gallery-slide">
+          <img src="" alt="" />
+        </div>
+        <div class="gallery__gallery-slide">
+          <img src="" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 </main>
 
@@ -255,6 +761,7 @@
 </footer>
 
 <script src="/assets/js/addresses.js" type="text/javascript"></script>
+<script src="/assets/js/gallery.js" type="text/javascript"></script>
 <script src="/assets/js/tariffs.js" type="text/javascript"></script>
 <script src="/assets/js/reviews.js" type="text/javascript"></script>
 <script src="/assets/js/swiper.js" type="text/javascript"></script>

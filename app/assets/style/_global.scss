@@ -11,6 +11,18 @@ body {
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+    &::-webkit-scrollbar-track {
+        background: $light-gray;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $red;
+        border-radius: 20px;
+    }
+
 }
 
 .button {

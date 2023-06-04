@@ -113,7 +113,6 @@ inspectors.forEach((inspector, index) => {
 
 swiper.update();
 
-
 swiper.on('click', () => {
   const clickedSlide = event.target.closest('.swiper-slide');
 

@@ -69,6 +69,9 @@ body::-webkit-scrollbar-thumb {
   background: #e30613;
   border-radius: 20px
 }
+main {
+  padding-top: 80px
+}
 .button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -194,12 +197,25 @@ body::-webkit-scrollbar-thumb {
   color: #a5a5a5
 }
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   max-height: 80px;
   background-color: #f6f5f3;
-  position: relative;
   -webkit-filter: drop-shadow(0 4px 6px rgba(0, 0, 0, .15));
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, .15));
   z-index: 100
+}
+.header.sticky {
+  -webkit-transform: translate(0,-110%);
+  -ms-transform: translate(0,-110%);
+  transform: translate(0,-110%)
+}
+.header.sticky.visible {
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0)
 }
 .header .container {
   display: -ms-grid;

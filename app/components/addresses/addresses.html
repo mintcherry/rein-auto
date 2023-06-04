@@ -1,0 +1,71 @@
+<section class="addresses">
+  <div class="container">
+    <div class="addresses__top">
+      <h2 class="addresses__title">
+        <p>Адреса <span class="label">проведения занятий</span></p>
+      </h2>
+    </div>
+
+    <div class="addresses__content">
+      <div class="addresses__list"></div>
+      <div class="addresses__info">
+        <div class="addresses__info-top">
+          <p class="addresses__info-top__title">
+            Ближайшая остановка:
+          </p>
+          <p id="stopStation" class="addresses__info-top__desc"></p>
+        </div>
+
+        <div class="addresses__info-row">
+          <div class="addresses__info-row__left">
+            <div class="addresses__info-row__column">
+              <img src="../assets/images/icons/minibus.svg" alt="" />
+            </div>
+            <div class="addresses__info-row__column">
+              <p>Маршрутки:</p>
+              <p id="minibuses"></p>
+            </div>
+          </div>
+          <div id="minibusesDesc" class="addresses__info-row__right"></div>
+        </div>
+        <div class="addresses__info-row">
+          <div class="addresses__info-row__left">
+            <div class="addresses__info-row__column">
+              <img src="../assets/images/icons/trolleybus.svg" alt="" />
+            </div>
+            <div class="addresses__info-row__column">
+              <p>Троллейбусы:</p>
+              <p id="trolleybus"></p>
+            </div>
+          </div>
+          <div id="trolleybusDesc" class="addresses__info-row__right"></div>
+        </div>
+        <div class="addresses__info-row">
+          <div class="addresses__info-row__left">
+            <div class="addresses__info-row__column">
+              <img src="../assets/images/icons/buses.svg" alt="" />
+            </div>
+            <div class="addresses__info-row__column">
+              <p>Автобусы:</p>
+              <p id="buses"></p>
+            </div>
+          </div>
+          <div id="busesDesc" class="addresses__info-row__right"></div>
+        </div>
+
+        <div class="addresses__info-bottom">
+          <p class="addresses__info-bottom__title">
+            Ближайшая группа:
+          </p>
+          <p id="group" class="addresses__info-bottom__desc"></p>
+        </div>
+      </div>
+      <div class="addresses__map">
+        <div id="address-map" class="address-map"></div>
+        <a id="addressLink" target="_blank" class="addresses__link btn btn_green">
+          Показать на карте
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

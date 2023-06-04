@@ -1,0 +1,20 @@
+@import 'constants';
+@import 'libs/mixins';
+@import 'libs/font-face';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+// ======= COMPONENTS =======
+@import '../style/templates/header.scss';
+@import '../style/templates/footer.scss';
+@import '../style/templates/banner.scss';
+@import '../style/templates/inspectors.scss';
+@import '../style/templates/tariff.scss';
+@import '../style/templates/sale.scss';
+@import '../style/templates/stocks.scss';
+@import '../style/templates/filial.scss';
+@import '../style/templates/addresses.scss';
+@import '../style/templates/reviews.scss';
+@import '../style/templates/gallery.scss';
+// ======= PAGES =======
+@import 'pages/main';

@@ -1,0 +1,71 @@
+.filial {
+  min-height: 360px;
+  margin-top: -10px;
+  padding: 50px 0;
+  background: url('/assets/images/filial/background.png');
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+.filial__title {
+  margin-bottom: 40px;
+
+  p {
+    @include font(48px,
+            56px,
+            700);
+    margin-bottom: 10px;
+    color: $white;
+  }
+}
+
+.filial__description {
+  @include font(20px,
+          24px,
+          500);
+  color: #A5A5A5;
+}
+
+.filial__form-fields {
+  display: grid;
+  grid-template-columns: repeat(2, 325px);
+  grid-gap: 10px;
+
+  .filial__form-field__row {
+    height: 44px;
+    position: relative;
+
+    .filial__form-field__star {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      color: $red;
+    }
+  }
+}
+
+.filial__form-bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.filial__form-btn {
+  width: 260px;
+  margin-right: 20px;
+}
+
+.filial__form-bottom__description {
+  @include font(14px,
+          16px,
+          500);
+  max-width: 330px;
+  color: $white;
+
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}

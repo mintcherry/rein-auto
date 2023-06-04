@@ -1,0 +1,133 @@
+.sale {
+  min-height: 390px;
+  margin-top: -10px;
+  padding: 50px 0;
+  background: url('/assets/images/inspectors/background.png');
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.sale__form {
+  max-width: 660px;
+  margin-right: 40px;
+}
+
+.sale__title {
+  margin-bottom: 40px;
+
+  p {
+    @include font(48px,
+            56px,
+            700);
+    margin-bottom: 10px;
+    color: $white;
+  }
+}
+
+.sale__description {
+  @include font(20px,
+          24px,
+          500);
+  color: #A5A5A5;
+}
+
+.sale__form-fields {
+  display: grid;
+  grid-template-columns: repeat(2, 325px);
+  grid-gap: 10px;
+
+  .sale__form-field__row {
+    height: 44px;
+    position: relative;
+
+    .sale__form-field__star {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      color: $red;
+    }
+  }
+}
+
+.sale__form-bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.sale__form-btn {
+  width: 260px;
+  margin-right: 20px;
+}
+
+.sale__form-bottom__description {
+  @include font(14px,
+          16px,
+          500);
+  max-width: 330px;
+  color: $white;
+
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+
+.sale__right {
+  display: flex;
+  flex-direction: column;
+
+  ul {
+    margin-bottom: 10px;
+    padding-left: 20px;
+
+    li {
+      @include font(18px,
+              22px,
+              400);
+      color: #F6F5F3;
+      list-style: square;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  p {
+    @include font(20px,
+            24px,
+            500);
+    margin-bottom: 20px;
+    color: $white;
+
+    &:last-child {
+      font-weight: 400;
+
+      span {
+        color: $red;
+      }
+    }
+  }
+}
+
+.sale__right-title {
+  @include font(20px,
+          24px,
+          500);
+  margin-bottom: 20px;
+  color: $white;
+}
+
+.filial__img {
+  position: absolute;
+  right: -100px;
+  bottom: -110px;
+}

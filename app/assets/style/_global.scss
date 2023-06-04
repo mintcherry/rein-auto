@@ -1,0 +1,85 @@
+.hidden-svg-sprite {
+    @include hide;
+    top: -100%;
+    left: -100%;
+    width: 0;
+    height: 0;
+}
+
+body {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.button {
+    @include flexCenter;
+}
+
+.container {
+    max-width: 1200px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 13px 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.btn {
+    @include font(16px, 19px, 600);
+    height: 48px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+    color: $white;
+    text-transform: uppercase;
+    outline: none;
+    transition: 250ms;
+    user-select: none;
+    &_green {
+        background: linear-gradient(94.43deg, #00A62F 0%, #1EC44D 73.96%, #00A62F 100%);
+        &:hover {
+            background: linear-gradient(94.43deg, #14BA43 28.12%, #46EC75 69.79%, #14BA43 100%);
+        }
+        &:active {
+            background: linear-gradient(94.43deg, #007400 0%, #00921B 73.96%, #007400 100%);
+        }
+    }
+    &_red {
+        background: linear-gradient(90deg, #DC0000 20.83%, #A52727 100%);
+        &:hover {
+            background: linear-gradient(90deg, #DC0000 100%, #A52727 100%);
+        }
+        &:active {
+            background: linear-gradient(0deg, #DC0000 100%, #A52727 100%);
+        }
+    }
+}
+
+.label {
+    display: inline-block;
+    width: fit-content;
+    padding: 6px 20px;
+    background-color: $red;
+    border-radius: 15px;
+}
+
+.form-field__input {
+    @include font(18px, 22px, 400);
+    display: inline-block;
+    width: 325px;
+    height: 44px;
+    padding: 15px 20px;
+    color: $deep-blue;
+    box-sizing: border-box;
+    color: $deep-blue;
+    border: 1px solid $red;
+    border-radius: 15px;
+    position: relative;
+    outline: none;
+    &::placeholder {
+        @include font(14px, 16px, 300);
+        color: #A5A5A5;
+    }
+}

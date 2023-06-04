@@ -1,0 +1,148 @@
+.inspectors {
+  @include flexCenter;
+  margin-top: -10px;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  position: relative;
+  background: url('/assets/images/inspectors/background.png');
+  background-size: 100% 100%;
+  z-index: 10;
+}
+
+.inspectors__top {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.inspectors__title {
+  @include font(48px,
+          56px,
+          700);
+  color: $white;
+  margin-bottom: 10px;
+
+  span {
+    display: inline-block;
+    color: $red;
+
+    &:first-child {
+      padding: 0 20px;
+      background-color: $red;
+      border-radius: 15px;
+      color: $white;
+    }
+  }
+}
+
+.inspectors__description {
+  @include font(20px,
+          24px,
+          400);
+  color: #A5A5A5;
+}
+
+.inspectors__content {
+  display: flex;
+}
+
+.inspectors__image {
+  max-width: 520px;
+  width: 100%;
+  height: 520px;
+  margin-right: 20px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.inspectors__info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.inspectors__name {
+  @include font(28px,
+          36px,
+          500);
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 20px;
+  padding: 8px 40px;
+  background: $red;
+  border-radius: 15px;
+  color: $white;
+}
+
+.inspectors__experience {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  span {
+    @include font(26px,
+            30px,
+            500);
+    color: #F6F5F3;
+
+    &:last-child {
+      font-weight: 400
+    }
+  }
+}
+
+.inspectors__description-text {
+  @include font(20px,
+          24px,
+          500);
+  max-width: 560px;
+  width: 100%;
+  min-height: 96px;
+  margin-bottom: 65px;
+  color: $white;
+}
+
+.inspectors__slider {
+  max-width: 620px;
+  margin-top: 10px;
+  overflow: hidden;
+
+  .swiper-slide-active {
+    border-color: $red;
+  }
+}
+
+.inspectors__slider-slide {
+  min-width: 207px;
+  width: 207px;
+  min-height: 207px;
+  height: 207px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  filter: drop-shadow(0px 3.77143px 3.77143px rgba(0, 0, 0, 0.25));
+  border: 1px solid transparent;
+  transition: 250ms;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &:hover {
+    border-color: $red;
+  }
+}

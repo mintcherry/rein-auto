@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    // line-height: $line-height;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    transition: all .3s ease-in-out;
+}
+:focus {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+a,button{
+    text-decoration: none;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+}
+html {
+    scroll-behavior: smooth; 
+    overflow-x: hidden;
+}
+img{
+    max-width: 100%;
+    user-select: none;
+}
+.lock-scroll{
+    overflow: hidden;
+}

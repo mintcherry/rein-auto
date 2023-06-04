@@ -1,0 +1,37 @@
+.reviews {
+  margin-top: -20px;
+  padding-top: 160px;
+  padding-bottom: 160px;
+  background: $light-gray;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.reviews__top {
+  margin-bottom: 50px;
+}
+
+.reviews__title {
+  @include font(48px, 56px, 700);
+  color: $deep-blue;
+  position: relative;
+
+  .label {
+    @include font(40px, 46px, 700);
+    color: $white;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, #DC0000 20.83%, #A52727 100%);
+    position: absolute;
+    top: -10px;
+  }
+}

@@ -1,0 +1,156 @@
+.banner {
+  width: 100%;
+  min-height: 698px;
+  position: relative;
+  margin-top: -80px;
+  padding-top: 170px;
+}
+
+.banner__title {
+  @include font(60px, 78px, 700);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  color: $deep-blue;
+
+  p {
+    span {
+      color: $red;
+    }
+  }
+}
+
+.banner__description {
+  @include font(40px, 48px, 700);
+  display: inline-block;
+  margin-bottom: 40px;
+  position: relative;
+  color: $red;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #DC0000 20.83%, #A52727 100%);
+    position: absolute;
+    top: -5px;
+  }
+}
+
+.banner__record {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 50px;
+  padding-right: 20px;
+  background: $light-gray;
+  border-radius: 0px 20px 20px 0px;
+  position: relative;
+  z-index: 5;
+
+  p {
+    @include font(18px, 21px, 400);
+    display: inline-block;
+    margin-left: 20px;
+
+    span {
+      color: $red;
+    }
+  }
+}
+
+.banner__record-btn {
+  width: 257px;
+  height: 71px;
+}
+
+.banner__options {
+  display: grid;
+  grid-template-columns: repeat(3, 373px);
+  grid-gap: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.banner__option {
+  height: 145px;
+  padding: 20px;
+  background: $white;
+  box-shadow: 0px 3.97714px 7.95429px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  position: relative;
+
+  img {
+    position: absolute;
+    bottom: 0;
+    right: 0
+  }
+
+  &:nth-of-type(3) {
+    .banner__option-description {
+      max-width: 260px;
+    }
+  }
+}
+
+.banner__option-title {
+  @include font(18px, 21px, 400);
+  margin-bottom: 5px;
+  color: $deep-blue;
+  position: relative;
+  z-index: 1;
+
+  span {
+    color: $red;
+  }
+}
+
+.banner__option-description {
+  @include font(14px, 16px, 400);
+  max-width: 250px;
+  color: #A5A5A5;
+  position: relative;
+  z-index: 1;
+}
+
+.banner__bottom {
+  width: 100%;
+  height: 230px;
+  margin-top: -90px;
+  background-color: #F6F5F3;
+  position: relative;
+  z-index: 1;
+
+  img {
+    width: 100%;
+    position: absolute;
+    top: -120px;
+    z-index: 2;
+  }
+}
+
+.banner__backgrounds {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+
+    &:first-child {
+      margin-top: -20px;
+      margin-right: -35px;
+    }
+
+    &:last-child {
+      margin-top: 93px;
+      margin-right: 40px;
+    }
+  }
+}

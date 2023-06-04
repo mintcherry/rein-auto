@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Главная | Rain Auto</title>
+
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/style/main.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=39d8774b-7b26-47d2-bfb4-ee36a51c614b&lang=ru_RU" type="text/javascript"></script>
+</head>
+
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__logo">
+            <img src="../assets//images/icons/main-logo.svg" alt="logo" />
+        </div>
+
+        <nav class="header__navigation">
+            <a href="#price" class="header__link">
+                Стоимость
+            </a>
+            <a href="#education" class="header__link header__link_red">
+                Онлайн-обучение
+            </a>
+            <a href="#instructors" class="header__link">
+                Инструкторы
+            </a>
+            <a href="#feedbacks" class="header__link">
+                Отзывы
+            </a>
+            <a href="#filials" class="header__link">
+                Филиалы
+            </a>
+        </nav>
+
+        <div class="header__contact">
+            <a class="header__contact-phone" href="+79788909090">
+                +7 (978) 890-90-90
+            </a>
+
+            <button class="header__contact-btn btn btn_green">
+                Перезвоните
+            </button>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+  <section class="banner">
+  <div class="container">
+    <h1 class="banner__title">
+      <p>Обучение <span>вождению</span></p>
+      <p>В УДОВОЛЬСТВИЕ</p>
+    </h1>
+
+    <p class="banner__description">
+      Спокойно и легко
+    </p>
+
+    <div class="banner__record">
+      <button class="banner__record-btn btn btn_green">
+        Записаться
+      </button>
+
+      <p>У нас есть возможность <br> <span>онлайн-обучения!</span></p>
+    </div>
+
+    <div class="banner__options">
+      <div class="banner__option">
+        <h3 class="banner__option-title">
+          <p>Адекватные и терпеливые <br> <span>инструкторы</span></p>
+        </h3>
+
+        <p class="banner__option-description">
+          — профессионалы своего дела, лучшие 32 000 водителей на дорогах Крыма — их выпускники!
+        </p>
+
+        <img src="../assets/images/banner/inspectors.png" alt="" />
+      </div>
+      <div class="banner__option">
+        <h3 class="banner__option-title">
+          <span>100% гарантия</span> получения прав
+        </h3>
+
+        <p class="banner__option-description">
+          — все наши ученики получают права, 9 из 10 — c первого раза
+        </p>
+
+        <img src="../assets/images/banner/driver-license.png" alt="" />
+      </div>
+      <div class="banner__option">
+        <h3 class="banner__option-title">
+          Теория c любого устройства <span>24/7</span>
+        </h3>
+
+        <p class="banner__option-description">
+          — доступная и понятная форма подачи без визитов в класс, возможность задать вопрос преподавателю,
+          промежуточные тестирования
+        </p>
+
+        <img src="../assets/images/banner/computer.png" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="banner__bottom">
+    <img src="../assets/images/banner/banner-gradient.png" alt="">
+  </div>
+
+  <div class="banner__backgrounds">
+    <img src="../assets/images/banner/banner-background1.png" alt="">
+    <img src="../assets/images/banner/banner-background2.png" alt="">
+  </div>
+</section>
+
+
+
+
+  <section class="addresses">
+  <div class="container">
+    <div class="addresses__top">
+      <h2 class="addresses__title">
+        <p>Адреса <span class="label">проведения занятий</span></p>
+      </h2>
+    </div>
+
+    <div class="addresses__content">
+      <div class="addresses__list"></div>
+      <div class="addresses__info">
+        <div class="addresses__info-top">
+          <p class="addresses__info-top__title">
+            Ближайшая остановка:
+          </p>
+          <p id="stopStation" class="addresses__info-top__desc"></p>
+        </div>
+
+        <div class="addresses__info-row">
+          <div class="addresses__info-row__left">
+            <div class="addresses__info-row__column">
+              <img src="../assets/images/icons/minibus.svg" alt="" />
+            </div>
+            <div class="addresses__info-row__column">
+              <p>Маршрутки:</p>
+              <p id="minibuses"></p>
+            </div>
+          </div>
+          <div id="minibusesDesc" class="addresses__info-row__right"></div>
+        </div>
+        <div class="addresses__info-row">
+          <div class="addresses__info-row__left">
+            <div class="addresses__info-row__column">
+              <img src="../assets/images/icons/trolleybus.svg" alt="" />
+            </div>
+            <div class="addresses__info-row__column">
+              <p>Троллейбусы:</p>
+              <p id="trolleybus"></p>
+            </div>
+          </div>
+          <div id="trolleybusDesc" class="addresses__info-row__right"></div>
+        </div>
+        <div class="addresses__info-row">
+          <div class="addresses__info-row__left">
+            <div class="addresses__info-row__column">
+              <img src="../assets/images/icons/buses.svg" alt="" />
+            </div>
+            <div class="addresses__info-row__column">
+              <p>Автобусы:</p>
+              <p id="buses"></p>
+            </div>
+          </div>
+          <div id="busesDesc" class="addresses__info-row__right"></div>
+        </div>
+
+        <div class="addresses__info-bottom">
+          <p class="addresses__info-bottom__title">
+            Ближайшая группа:
+          </p>
+          <p id="group" class="addresses__info-bottom__desc"></p>
+        </div>
+      </div>
+      <div class="addresses__map">
+        <div id="address-map" class="address-map"></div>
+        <a id="addressLink" target="_blank" class="addresses__link btn btn_green">
+          Показать на карте
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+</main>
+
+<footer class="footer">
+  <div class="footer__line"></div>
+
+  <div class="container">
+    <nav class="footer__nav">
+      <a class="footer__nav-link" href="#">Главная</a>
+      <a class="footer__nav-link" href="#">Акции и скидки</a>
+      <a class="footer__nav-link" href="#">Новости</a>
+      <a class="footer__nav-link" href="#">Полезное</a>
+      <a class="footer__nav-link" href="#">Стоимость</a>
+      <a class="footer__nav-link footer__nav-link_red" href="#">Онлайн-обучение</a>
+      <a class="footer__nav-link" href="#">Автопарк</a>
+      <a class="footer__nav-link" href="#">Оплата</a>
+      <a class="footer__nav-link" href="#">Контакты</a>
+    </nav>
+
+    <div class="footer__middle">
+      <div class="footer__logo">
+        <img src="../assets//images/icons/main-logo.svg" alt="logo" />
+      </div>
+      <div class="footer__description">
+        <p>Лицензия Министерства образования, науки и молодежи</p>
+        <p>Республики Крым №0182 от 30.05.2016 года.</p>
+      </div>
+      <div class="footer__contacts">
+        <button class="footer__contacts-btn btn btn_red">
+          Написать директору
+        </button>
+
+        <a class="footer__contacts-social btn_red" href="#">
+          <img src="../assets/images/icons/odnaklasniki.svg" alt="">
+        </a>
+        <a class="footer__contacts-social btn_red" href="#">
+          <img src="../assets/images/icons/vk.svg" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__bottom-left">
+        <p>ООО «Рейн-Авто»</p>
+        <p><span>ИНН:</span> 9102022218</p>
+        <p><span>ОГРН:</span> 1149102034630</p>
+      </div>
+      <div class="footer__bottom-right">
+        <a href="#">Политика конфиденсальности</a>
+        <a href="#">Пользовательское соглащение</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/addresses.js" type="text/javascript"></script>
+<script src="/assets/js/tariffs.js" type="text/javascript"></script>
+<script src="/assets/js/reviews.js" type="text/javascript"></script>
+<script src="/assets/js/swiper.js" type="text/javascript"></script>
+</body>
+
+</html>

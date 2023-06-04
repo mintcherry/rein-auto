@@ -24,6 +24,9 @@ body {
     }
 
 }
+main{
+    padding-top: 80px;
+}
 
 .button {
     @include flexCenter;

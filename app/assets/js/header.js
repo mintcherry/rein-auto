@@ -1,7 +1,7 @@
 const html = document.querySelector('html');
 
 class Header{
-    constructor(header, offset = 0, burger = null, burgerMenu = null){
+    constructor(header, offset = 0, burger, burgerMenu){
         this.element = header;
         this.basePosition = header.offsetTop + offset;
         this.burger = burger;
@@ -56,14 +56,14 @@ class Header{
         this.element.classList.remove('visible');
     }
     ToggleBurgerActivity(){
-        if(this.burger != null && this.burgerMenu != null){
-            this.burger.classList.toggle('active');
-            this.burgerMenu.classList.toggle('active');
-        }
+        this.burger.classList.toggle('active');
+        this.burgerMenu.classList.toggle('active');
     }
 }
 
 
-const header = new Header(document.querySelector('.header'));
+const header = new Header(document.querySelector('.header'), 0, document.querySelector('.header__burger'), document.querySelector('.header__navigation'));
 
 header.Init();
+
+header.burger.addEventListener('click', () => header.ToggleBurgerActivity())

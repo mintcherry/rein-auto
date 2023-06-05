@@ -13,17 +13,16 @@
     justify-content: space-between;
 
     @media screen and (max-width: 1024px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @media screen and (max-width: 1024px) {
       flex-direction: column;
     }
   }
 
-  @media screen and (max-width: 576px) {
-    min-height: 790px;
-    padding: 30px 0;
-  }
-
-  @media (min-width: 576px) and (max-width: 1024px) {
-    min-height: 690px;
+  @media screen and (max-width: 1024px) {
     padding: 30px 0;
   }
 }
@@ -42,14 +41,6 @@
 .sale__title {
   margin-bottom: 40px;
 
-  @media screen and (max-width: 576px) {
-    margin-bottom: 400px;
-  }
-
-  @media (min-width: 576px) and (max-width: 1024px) {
-    margin-bottom: 380px;
-  }
-
   p {
     @include font(48px, 56px, 700);
     margin-bottom: 10px;
@@ -57,6 +48,7 @@
 
     @include mobile {
       @include font(24px, 30px, 700);
+      text-align: center;
     }
 
     @include tablet {
@@ -66,12 +58,59 @@
     @include large-tablet {
       @include font(44px, 52px, 700);
     }
+
+    @media screen and (max-width: 576px) {
+      text-align: center;
+    }
   }
 }
 
 .sale__description {
   @include font(20px, 24px, 500);
   color: #A5A5A5;
+
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.sale__form__mobile-description {
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    margin-bottom: 10px;
+    padding-left: 20px;
+
+    li {
+      @include font(18px, 22px, 400);
+      color: #F6F5F3;
+      list-style: square;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  p {
+    @include font(20px, 24px, 500);
+    margin-bottom: 20px;
+    color: $white;
+
+    &:last-child {
+      font-weight: 400;
+
+      span {
+        color: $red;
+      }
+    }
+  }
 }
 
 .sale__form-fields {
@@ -116,6 +155,7 @@
   margin-right: 20px;
 
   @media screen and (max-width: 576px) {
+    width: 100%;
     margin-right: 0;
     margin-bottom: 20px;
   }
@@ -131,10 +171,6 @@
     text-decoration: underline;
   }
 
-  @media screen and (max-width: 576px) {
-    text-align: center;
-  }
-
   @media screen and (max-width: 1024px) {
     max-width: 100%;
   }
@@ -144,11 +180,12 @@
   display: flex;
   flex-direction: column;
 
-  @media screen and (max-width: 576px) {
-    margin-top: -565px;
+  @media screen and (max-width: 768px) {
+    display: none;
   }
-  @media (min-width: 576px) and (max-width: 1024px) {
-    margin-top: -450px;
+
+  @include large-tablet {
+    margin-top: 40px;
   }
 
   ul {
@@ -191,4 +228,8 @@
   position: absolute;
   right: -100px;
   bottom: -110px;
+
+  @media screen and (max-width: 1024px){
+    display: none;
+  }
 }

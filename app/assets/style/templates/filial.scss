@@ -7,31 +7,68 @@
   box-sizing: border-box;
   position: relative;
   z-index: 2;
+
+  .container {
+    @media screen and (max-width: 1024px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 30px 0;
+  }
 }
 
 .filial__title {
   margin-bottom: 40px;
 
   p {
-    @include font(48px,
-            56px,
-            700);
+    @include font(48px, 56px, 700);
     margin-bottom: 10px;
     color: $white;
+
+    @include mobile {
+      @include font(24px, 30px, 700);
+      text-align: center;
+    }
+
+    @include tablet {
+      @include font(28px, 48px, 700);
+    }
+
+    @include large-tablet {
+      @include font(44px, 52px, 700);
+    }
+
+    @media screen and (max-width: 576px) {
+      text-align: center;
+    }
   }
 }
 
 .filial__description {
-  @include font(20px,
-          24px,
-          500);
+  @include font(20px, 24px, 500);
   color: #A5A5A5;
+
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .filial__form-fields {
   display: grid;
   grid-template-columns: repeat(2, 325px);
   grid-gap: 10px;
+  
+  @media screen and (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
+  
+  @media (min-width: 576px) and (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   .filial__form-field__row {
     height: 44px;
@@ -50,19 +87,31 @@
   display: flex;
   align-items: center;
   margin-top: 20px;
+  
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+  }
 }
 
 .filial__form-btn {
-  width: 260px;
+  min-width: 260px;
   margin-right: 20px;
+
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 .filial__form-bottom__description {
-  @include font(14px,
-          16px,
-          500);
+  @include font(14px, 16px, 500);
   max-width: 330px;
   color: $white;
+
+  @media screen and (max-width: 1024px){
+    max-width: 100%;
+    margin-top: 10px;
+  }
 
   a {
     color: $white;

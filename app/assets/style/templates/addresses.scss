@@ -6,11 +6,25 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media screen and (max-width: 576px) {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-bottom: 120px;
   }
 }
 
 .addresses__top {
   margin-bottom: 50px;
+
+  @include mobile {
+    margin-bottom: 30px;
+  }
 }
 
 .addresses__title {
@@ -18,9 +32,41 @@
   color: $deep-blue;
   position: relative;
 
+  @media screen and (max-width: 576px) {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  @include mobile {
+    @include font(24px, 30px, 700);
+  }
+
+  @include tablet {
+    @include font(28px, 48px, 700);
+  }
+
+  @include large-tablet {
+    @include font(44px, 52px, 700);
+  }
+
   .label {
     @include font(40px, 46px, 700);
     color: $white;
+    position: relative;
+    z-index: 5;
+
+    @include mobile {
+      @include font(20px, 28px, 700);
+      text-align: center;
+    }
+
+    @include tablet {
+      @include font(24px, 42px, 700);
+    }
+
+    @include large-tablet {
+      @include font(36px, 48px, 700);
+    }
   }
 
   &:before {
@@ -31,6 +77,10 @@
     background: linear-gradient(90deg, #DC0000 20.83%, #A52727 100%);
     position: absolute;
     top: -10px;
+
+    @media screen and (max-width: 576px) {
+      top: -20px;
+    }
   }
 }
 
@@ -40,6 +90,12 @@
   grid-template-columns: 380px 1fr;
   grid-gap: 20px;
   height: 680px;
+
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
 }
 
 .addresses__list {
@@ -53,6 +109,27 @@
   border-radius: 20px;
   overflow: hidden;
   background: $white;
+
+  @media screen and (max-width: 1024px) {
+    max-width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      width: 2px;
+
+      @media screen and (max-width: 480px) {
+        display: none;
+      }
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $light-gray;
+      border-radius: 5px;
+    }
+  }
 }
 
 .addresses__list-item {
@@ -64,8 +141,19 @@
   transition: 250ms;
   cursor: pointer;
 
+  @media screen and (max-width: 1024px) {
+    min-width: 205px;
+    height: 80px;
+    padding: 10px;
+  }
+
   &.active {
     border-color: $red;
+
+    @media screen and (max-width: 1024px) {
+      border-left: none;
+      border-bottom: 4px solid $red;
+    }
 
     .addresses__list-item__title {
       color: $red;
@@ -89,12 +177,22 @@
   @include font(20px, 24px, 500);
   margin-bottom: 2px;
   color: $deep-blue;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 18px;
+    line-height: 18px;
+  }
 }
 
 .addresses__list-item__description {
   @include font(18px, 22px, 400);
   max-width: 310px;
   color: #A5A5A5;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .addresses__info {
@@ -109,7 +207,12 @@
   padding: 20px;
   background: $white;
   border-radius: 20px;
-  box-shadow: 0px 3.97714px 7.95429px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3.97714px 7.95429px rgba(0, 0, 0, 0.05);
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .addresses__info-top {
@@ -117,12 +220,23 @@
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 30px;
+
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 
 .addresses__info-bottom {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+  }
 }
 
 .addresses__info-top__title,
@@ -138,12 +252,21 @@
   display: inline-block;
   margin-left: 40px;
   color: $red;
+
+  @media screen and (max-width: 576px) {
+    margin-left: 0;
+  }
 }
 
 .addresses__info-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: start;
+  }
 
   &:not(:last-child) {
     margin-bottom: 30px;
@@ -153,6 +276,10 @@
 .addresses__info-row__left {
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 10px;
+  }
 }
 
 .addresses__info-row__column {
@@ -192,18 +319,29 @@
   width: 760px;
   height: 290px;
   background: $white;
-  border-radius: 20px;
   box-shadow: 0 3.97714px 7.95429px rgba(0, 0, 0, 0.05);
   position: relative;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    height: 360px;
+  }
 
   #address-map {
     width: 100%;
     height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
     pointer-events: none;
 
     .ymaps-2-1-79-map {
       width: 760px !important;
       height: 100% !important;
+
+      @media screen and (max-width: 1024px) {
+        width: 100% !important;
+        height: 360px !important;
+      }
     }
 
     .ymaps-2-1-79-copyrights-pane {
@@ -219,4 +357,12 @@
   bottom: 20px;
   left: 20px;
   z-index: 10;
+
+  @media screen and (max-width: 576px) {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    left: auto;
+    bottom: auto;
+  }
 }

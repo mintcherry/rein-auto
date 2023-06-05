@@ -8,26 +8,142 @@
         * общий стаж команды
       </p>
     </div>
-
     <div class="inspectors__content">
-      <div class="inspectors__image">
-        <img src="" alt="">
-      </div>
-
-      <div class="inspectors__info">
-        <div class="inspectors__info__top">
-          <div class="inspectors__name"></div>
-
-          <div class="inspectors__experience">
-            <span class="inspectors__experience-label">Стаж работы: &nbsp;</span>
-            <span class="inspectors__experience__value"></span>
-          </div>
-
-          <div class="inspectors__description-text"></div>
+      <div class="inspectors__content-slider swiper">
+        <div class="inspectors__content-slider-wrapper swiper-wrapper">
+            @@loop('instructors-slide.html',[
+              {
+                name: 'Черевко Александр Сергеевич',
+                experience: '7 лет',
+                description: 'Спокойный, терпеливый, адекватный, тактично корректирует ошибки и внимательно контролирует ученика в процессе вождения.',
+                img: 'assets/images/inspectors/Черевко_Александр_Сергеевич.jpg',
+              },
+              {
+                name: 'Науменко Иван Александрович',
+                experience: '5 лет',
+                description: 'Терпеливый, спокойный, ,коммуникабельный, придаёт уверенности ученикам.',
+                img: 'assets/images/inspectors/Науменко_Иван_Александрович.jpg',
+              },
+              {
+                name: 'Маруга Иван Юрьевич',
+                experience: '8 лет',
+                description: 'Позитивный, внимательный, приятный в общении, требовательный.',
+                img: 'assets/images/inspectors/Маруга_Иван_Юрьевич.jpg',
+              },
+              {
+                name: 'Медведчук Владимир Николаевич ОМР',
+                experience: '16 лет',
+                description: 'Профессионал своего дела, индивидуальный подход к каждому ученику.',
+                img: 'assets/images/inspectors/Медведчук_Владимир_Николаевич_ОМР.jpg',
+              },
+              {
+                name: 'Мустафаев Мемет Рефатович',
+                experience: '7 лет',
+                description: 'Пунктуальный,сдержанный. Объясняет терпеливо и доходчиво, ошибки разбираются сразу и очень подробно. Занятия проходят в легкой и не принужденной обстановке.',
+                img: 'assets/images/inspectors/Мустафаев_Мемет_Рефатович.jpg',
+              },
+              {
+                name: 'Аметов Решат Талятович',
+                experience: '13 лет',
+                description: 'Спокойный, комуникабельный, трудолюбивый, отзывчивый , настойчивый.',
+                img: 'assets/images/inspectors/Аметов_Решат_Талятович.jpg',
+              },
+              {
+                name: 'Музыченко Александр Васильевич',
+                experience: '3 года',
+                description: 'Спокойный, комуникабельный, трудолюбивый, отзывчивый , настойчивый.',
+                img: 'assets/images/inspectors/Музыченко_Александр_Васильевич.jpg',
+              },
+              {
+                name: 'Балакирев Максим Викторович',
+                experience: '3 года',
+                description: 'Живая, энергичная, яркая, ответственная,внимательная. Умеет поддержать и найти подход к ученикам.',
+                img: 'assets/images/inspectors/Балакирев_Максим_Викторович.jpg',
+              },
+              {
+                name: 'Аблямитов Мемет Серверович',
+                experience: '13 лет',
+                description: 'Общительный , энергичный, точная и быстрая реакция,отзывчивость и внимательность к ученикам.',
+                img: 'assets/images/inspectors/Аблямитов_Мемет_Серверович.jpg',
+              },
+              {
+                name: 'Шаповалов Дмитрий Семенович',
+                experience: '8 лет',
+                description: 'Коммуникабельный, с чувством юмора, отзывчивый.',
+                img: 'assets/images/inspectors/Шаповалов_Дмитрий_Семенович.jpg',
+              },
+              {
+                name: 'Копейко Андрей Николаевич',
+                experience: '8 лет',
+                description: 'Энергичный, коммуникабельный, безупречное знание Правил Дорожного Движения.',
+                img: 'assets/images/inspectors/Копейко_Андрей_Николаевич.jpg',
+              },
+              {
+                name: 'Емельянов Александр Викторович',
+                experience: '9 лет',
+                description: 'Открытый, внимательный,использует понятные термины и иллюстрирует ситуации яркими и запоминающимися случаями из жизни.',
+                img: 'assets/images/inspectors/Емельянов_Александр_Викторович.jpg',
+              },
+              {
+                name: 'Негодяев Юрий Алексеевич',
+                experience: '9 лет',
+                description: 'Коммуникабельный, открытый, с чувством юмора, во всем видит положительные аспекты.',
+                img: 'assets/images/inspectors/Негодяев_Юрий_Алексеевич.jpg',
+              },
+              {
+                name: 'Сейдаметов Энвер Асим-Сабриевич ВС',
+                experience: '15 лет',
+                description: 'Сдержанный, терпимый, уравновешенный, быстрая скорость реакции, большой стаж вождения в разных климатических зонах.',
+                img: 'assets/images/inspectors/Сейдаметов_Энвер_Асим-Сабриевич_ВС.jpg',
+              },
+            ])
         </div>
-
-        <div class="inspectors__slider">
-          <div class="swiper-wrapper"></div>
+        <div class="inspectors__content-slider-nav swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="inspectors__thumb-slider swiper">
+      <div class="swiper-wrapper">
+        <div class="inspector__thumb-slide swiper-slide">
+          <img src="assets/images/inspectors/Черевко_Александр_Сергеевич.jpg" alt="">
+        </div>
+        <div class="inspector__thumb-slide swiper-slide">
+          <img src="assets/images/inspectors/Науменко_Иван_Александрович.jpg" alt="">
+        </div>
+        <div class="inspector__thumb-slide swiper-slide">
+          <img src="assets/images/inspectors/Маруга_Иван_Юрьевич.jpg" alt="">
+        </div>
+        <div class="inspector__thumb-slide swiper-slide">
+          <img src="assets/images/inspectors/Медведчук_Владимир_Николаевич_ОМР.jpg" alt="">
+        </div>
+        <div class="inspector__thumb-slide swiper-slide">
+          <img src="assets/images/inspectors/Мустафаев_Мемет_Рефатович.jpg" alt="">
+        </div>
+        <div class="inspector__thumb-slide swiper-slide">
+          <img src="assets/images/inspectors/Аметов_Решат_Талятович.jpg" alt="">
+        </div>
+        <div class="inspector__thumb-slide swiper-slide">
+          <img src="assets/images/inspectors/Музыченко_Александр_Васильевич.jpg" alt="">
+        </div>
+        <div class="inspector__thumb-slide swiper-slide">
+          <img src="assets/images/inspectors/Балакирев_Максим_Викторович.jpg" alt="">
+        </div>
+        <div class="inspector__thumb-slide swiper-slide">
+          <img src="assets/images/inspectors/Аблямитов_Мемет_Серверович.jpg" alt="">
+        </div>
+        <div class="inspector__thumb-slide swiper-slide">
+          <img src="assets/images/inspectors/Шаповалов_Дмитрий_Семенович.jpg" alt="">
+        </div>
+        <div class="inspector__thumb-slide swiper-slide">
+          <img src="assets/images/inspectors/Копейко_Андрей_Николаевич.jpg" alt="">
+        </div>
+        <div class="inspector__thumb-slide swiper-slide">
+          <img src="assets/images/inspectors/Емельянов_Александр_Викторович.jpg" alt="">
+        </div>
+        <div class="inspector__thumb-slide swiper-slide">
+          <img src="assets/images/inspectors/Негодяев_Юрий_Алексеевич.jpg" alt="">
+        </div>
+        <div class="inspector__thumb-slide swiper-slide">
+          <img src="assets/images/inspectors/Сейдаметов_Энвер_Асим-Сабриевич_ВС.jpg" alt="">
         </div>
       </div>
     </div>

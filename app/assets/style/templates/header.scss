@@ -64,6 +64,9 @@
       visibility: visible;
     }
   }
+  @media screen and (max-width: 600px){
+    padding: 50px 10px;
+  }
   & .header__contact-btn{
     display: none;
     @media screen and (max-width: 1024px){

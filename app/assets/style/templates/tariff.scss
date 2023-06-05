@@ -7,6 +7,9 @@
 
 .tariff__top {
   margin-bottom: 100px;
+  @media screen and (max-width: 1239px){
+    margin-bottom: 30px;
+  }
 }
 
 .tariff__title {
@@ -14,8 +17,19 @@
   color: $deep-blue;
   position: relative;
 
+  @include mobile {
+    @include font(26px, 31px, 700);
+  }
+
+  @include tablet {
+    @include font(36px, 48px, 700);
+  }
+
+  @include large-tablet {
+    @include font(48px, 54px, 700);
+  }
   .label {
-    @include font(40px, 46px, 700);
+    @include font(inherit, inherit, inherit);
     color: $white;
   }
 
@@ -29,11 +43,43 @@
     top: -10px;
   }
 }
-
+.tariff__tabs{
+  display: none;
+  @media screen and (max-width: 1239px) {
+    margin: 0 auto 80px;
+    display: flex;
+    max-width: 360px;
+    background: #fff;
+    border-radius: 15px;
+    filter: drop-shadow(0px 3.97714px 7.95429px rgba(0, 0, 0, 0.05));
+    overflow: hidden;
+    @include mobile{
+      max-width: 100%;
+      width: 100%;
+      border-radius: 0;
+    }
+    &-item{
+      padding: 15px 0;
+      flex-grow: 1;
+      cursor: pointer;
+      &.active{
+        border-bottom: 2px solid #E30613;
+      }
+    }
+    &-title{
+      @include font(16px, 19px, 500);
+      text-align: center;
+    }
+  }
+}
 .tariff__options {
   display: grid;
   grid-template-columns: repeat(3, 360px);
   grid-gap: 40px;
+  @media screen and (max-width: 1239px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .tariff__option {
@@ -45,7 +91,16 @@
   border-radius: 20px;
   position: relative;
   cursor: pointer;
-
+  @media screen and (max-width: 1239px) {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    &.active{
+      position: relative;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
   &:hover {
     border-color: $red;
   }
@@ -65,7 +120,9 @@
   @include font(30px, 36px, 800);
   color: $deep-blue;
   margin-bottom: 5px;
-
+  @include mobile{
+    @include  font(22px, 26px, 500)
+  }
   span {
     color: $red;
   }

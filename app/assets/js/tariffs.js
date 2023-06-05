@@ -171,3 +171,21 @@ function changeCTariffOptions(prop, value) {
 ATariff.innerHTML = tariffs[0].totalPrice + ' ₽';
 BTariff.innerHTML = tariffs[1].totalPrice + ' ₽';
 CTariff.innerHTML = tariffs[2].totalPrice + ' ₽';
+
+const tariffTabs = document.querySelectorAll('.js-tariff-tab');
+
+
+function changeTab(clickedTab){
+  let tariffNum = clickedTab.dataset.tariff;
+
+  document.querySelector('.js-tariff-tab.active').classList.remove('active');
+  document.querySelector('.js-tariff-option.active').classList.remove('active');
+  clickedTab.classList.add('active');
+  document.querySelector('.js-tariff-option[data-tariff="' + tariffNum + '"]').classList.add('active');
+}
+
+if(window.innerWidth < 1240){
+  tariffTabs.forEach(loopTab => {
+    loopTab.addEventListener('click', () => changeTab(loopTab));
+  })
+}

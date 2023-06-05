@@ -4,6 +4,23 @@
   position: relative;
   margin-top: -80px;
   padding-top: 170px;
+
+  .container {
+    @include mobile {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  @include mobile {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  @include tablet {
+    margin-top: 0;
+    padding-top: 0;
+  }
 }
 
 .banner__title {
@@ -20,14 +37,43 @@
       color: $red;
     }
   }
+
+  @include mobile {
+    @include font(28px, 38px, 700);
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  @include tablet {
+    @include font(36px, 48px, 700);
+  }
+
+  @include large-tablet {
+    @include font(48px, 54px, 700);
+  }
 }
 
 .banner__description {
   @include font(40px, 48px, 700);
   display: inline-block;
   margin-bottom: 40px;
-  position: relative;
   color: $red;
+  position: relative;
+  z-index: 5;
+
+  @include mobile {
+    display: block;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+  @include tablet {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 28px;
+  }
 
   &:before {
     content: '';
@@ -37,6 +83,10 @@
     background: linear-gradient(90deg, #DC0000 20.83%, #A52727 100%);
     position: absolute;
     top: -5px;
+
+    @include mobile {
+      top: -10px;
+    }
   }
 }
 
@@ -47,8 +97,9 @@
   margin-bottom: 50px;
   padding-right: 20px;
   background: $light-gray;
-  border-radius: 0px 20px 20px 0px;
+  border-radius: 20px;
   position: relative;
+  overflow: hidden;
   z-index: 5;
 
   p {
@@ -59,12 +110,48 @@
     span {
       color: $red;
     }
+
+    @include mobile {
+      display: block;
+      width: 100%;
+      margin-left: 0;
+      padding: 15px 0;
+      font-size: 13px;
+      line-height: 16px;
+      text-align: center;
+
+      br {
+        display: none;
+      }
+    }
+
+    @include tablet {
+      padding-right: 10px;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+    width: 95%;
+    margin: 0 auto 275px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0 auto 275px;
+    padding-right: 0;
   }
 }
 
 .banner__record-btn {
-  width: 257px;
-  height: 71px;
+  width: 256px;
+  height: 70px;
+
+  @include mobile {
+    width: 100%;
+    height: 50px;
+  }
 }
 
 .banner__options {
@@ -73,6 +160,14 @@
   grid-gap: 20px;
   position: relative;
   z-index: 10;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  @include large-tablet {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .banner__option {
@@ -83,6 +178,10 @@
   border-radius: 20px;
   position: relative;
 
+  @include mobile {
+    padding: 10px;
+  }
+
   img {
     position: absolute;
     bottom: 0;
@@ -92,6 +191,14 @@
   &:nth-of-type(3) {
     .banner__option-description {
       max-width: 260px;
+
+      @include mobile {
+        max-width: 220px;
+      }
+    }
+
+    @include large-tablet {
+      grid-column: span 2;
     }
   }
 }
@@ -102,7 +209,12 @@
   color: $deep-blue;
   position: relative;
   z-index: 1;
-  
+
+  @include mobile {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
   @media (min-width: 992px) and (max-width: 1080px) {
     font-size: 16px;
     line-height: 18px;
@@ -135,6 +247,26 @@
     top: -120px;
     z-index: 2;
   }
+
+
+  @media screen and (max-width: 480px) {
+    height: 600px;
+    margin-top: -440px;
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    height: 600px;
+    margin-top: -475px;
+  }
+
+  @include mobile {
+    height: 550px;
+  }
+
+  @include large-tablet {
+    height: 400px;
+    margin-top: -265px;
+  }
 }
 
 .banner__backgrounds {
@@ -143,6 +275,10 @@
   position: absolute;
   top: 0;
   left: 0;
+
+  @media screen and (max-width: 768px) {
+    top: 150px;
+  }
 
   img {
     position: absolute;
@@ -153,11 +289,43 @@
     &:first-child {
       margin-top: -20px;
       margin-right: -35px;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+
+      @include large-tablet {
+        width: 640px;
+        margin-top: 50px;
+      }
     }
 
     &:last-child {
       margin-top: 93px;
       margin-right: 40px;
+
+      @media screen and (max-width: 768px) {
+        width: 340px;
+        height: 200px;
+        margin-top: 190px;
+        margin-right: 0;
+      }
+
+      @include large-tablet {
+        width: 440px;
+        margin-top: 260px;
+      }
     }
+  }
+}
+
+.banner__backgrounds-mobile {
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    max-width: 100%;
+    height: 400px;
+    object-fit: contain;
   }
 }

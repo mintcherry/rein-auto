@@ -11,37 +11,77 @@
   .container {
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    min-height: 790px;
+    padding: 30px 0;
+  }
+
+  @media (min-width: 576px) and (max-width: 1024px) {
+    min-height: 690px;
+    padding: 30px 0;
   }
 }
 
 .sale__form {
   max-width: 660px;
+  width: 100%;
   margin-right: 40px;
+
+  @media screen and (max-width: 1024px) {
+    max-width: 100%;
+    margin-right: 0;
+  }
 }
 
 .sale__title {
   margin-bottom: 40px;
 
+  @media screen and (max-width: 576px) {
+    margin-bottom: 400px;
+  }
+
+  @media (min-width: 576px) and (max-width: 1024px) {
+    margin-bottom: 380px;
+  }
+
   p {
-    @include font(48px,
-            56px,
-            700);
+    @include font(48px, 56px, 700);
     margin-bottom: 10px;
     color: $white;
+
+    @include mobile {
+      @include font(24px, 30px, 700);
+    }
+
+    @include tablet {
+      @include font(28px, 48px, 700);
+    }
+
+    @include large-tablet {
+      @include font(44px, 52px, 700);
+    }
   }
 }
 
 .sale__description {
-  @include font(20px,
-          24px,
-          500);
+  @include font(20px, 24px, 500);
   color: #A5A5A5;
 }
 
 .sale__form-fields {
   display: grid;
-  grid-template-columns: repeat(2, 325px);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
+
+  @media screen and (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
 
   .sale__form-field__row {
     height: 44px;
@@ -54,23 +94,35 @@
       color: $red;
     }
   }
+
+  @media screen and (max-width: 1024px) {
+    margin: 0 auto;
+  }
 }
 
 .sale__form-bottom {
   display: flex;
   align-items: center;
   margin-top: 20px;
+
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+  }
 }
 
 .sale__form-btn {
   width: 260px;
+  min-width: 175px;
   margin-right: 20px;
+
+  @media screen and (max-width: 576px) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
 
 .sale__form-bottom__description {
-  @include font(14px,
-          16px,
-          500);
+  @include font(14px, 16px, 500);
   max-width: 330px;
   color: $white;
 
@@ -78,20 +130,33 @@
     color: $white;
     text-decoration: underline;
   }
+
+  @media screen and (max-width: 576px) {
+    text-align: center;
+  }
+
+  @media screen and (max-width: 1024px) {
+    max-width: 100%;
+  }
 }
 
 .sale__right {
   display: flex;
   flex-direction: column;
 
+  @media screen and (max-width: 576px) {
+    margin-top: -565px;
+  }
+  @media (min-width: 576px) and (max-width: 1024px) {
+    margin-top: -450px;
+  }
+
   ul {
     margin-bottom: 10px;
     padding-left: 20px;
 
     li {
-      @include font(18px,
-              22px,
-              400);
+      @include font(18px, 22px, 400);
       color: #F6F5F3;
       list-style: square;
 
@@ -102,9 +167,7 @@
   }
 
   p {
-    @include font(20px,
-            24px,
-            500);
+    @include font(20px, 24px, 500);
     margin-bottom: 20px;
     color: $white;
 
@@ -119,9 +182,7 @@
 }
 
 .sale__right-title {
-  @include font(20px,
-          24px,
-          500);
+  @include font(20px, 24px, 500);
   margin-bottom: 20px;
   color: $white;
 }

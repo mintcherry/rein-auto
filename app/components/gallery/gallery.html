@@ -45,6 +45,81 @@
           <img src="" alt="" />
         </div>
       </div>
+
+      <div class="gallery__slider_first gallery-sliders swiper">
+        <div class="gallery__slider_first__wrapper swiper-wrapper">
+          @@loop('gallery-slide.html',[
+            {
+            img: 'assets/images/gallery/gallery-sec1-1.jpg',
+            },
+            {
+            img: 'assets/images/gallery/gallery-sec1-2.jpg',
+            },
+            {
+            img: 'assets/images/gallery/gallery-sec1-3.jpg',
+            },
+            {
+            img: 'assets/images/gallery/gallery-sec1-4.jpg',
+            },
+          ])
+        </div>
+        <div class="gallery__slider_first__slider-nav swiper-pagination"></div>
+      </div>
+
+      <div class="gallery__slider_second gallery-sliders swiper">
+        <div class="gallery__slider_second__wrapper swiper-wrapper">
+          @@loop('gallery-slide.html',[
+            {
+            img: 'assets/images/gallery/gallery-sec2-1.jpg',
+            },
+            {
+            img: 'assets/images/gallery/gallery-sec2-2.jpg',
+            },
+            {
+            img: 'assets/images/gallery/gallery-sec2-3.jpg',
+            },
+            {
+            img: 'assets/images/gallery/gallery-sec2-4.jpg',
+            },
+          ])
+        </div>
+        <div class="gallery__slider_second__slider-nav swiper-pagination"></div>
+      </div>
+
+      <div class="gallery__slider_third gallery-sliders swiper">
+        <div class="gallery__slider_third__wrapper swiper-wrapper">
+          @@loop('gallery-slide.html',[
+            {
+            img: 'assets/images/gallery/gallery-sec3-1.jpg',
+            },
+            {
+            img: 'assets/images/gallery/gallery-sec3-2.jpg',
+            },
+            {
+            img: 'assets/images/gallery/gallery-sec3-3.jpg',
+            },
+            {
+            img: 'assets/images/gallery/gallery-sec3-4.jpg',
+            },
+          ])
+        </div>
+        <div class="gallery__slider_third__slider-nav swiper-pagination"></div>
+      </div>
+
+
+      <div class="gallery__mobile-bottom">
+        <div class="gallery__advantages">
+          <img src="../assets/images/gallery/gallery-advantages.png" alt="">
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur. Adipiscing turpis a non imperdiet elit donec ut habitant.
+          </p>
+        </div>
+
+        <a href="#" class="gallery__gallery-link btn btn_green">
+          Перейти в галерею
+        </a>
+      </div>
     </div>
   </div>
 </section>

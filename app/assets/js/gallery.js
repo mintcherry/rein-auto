@@ -1,12 +1,13 @@
 let controlsOption = document.querySelectorAll('.gallery__controls-option');
 let slideOptions = document.querySelectorAll('.gallery__gallery-slide');
+let sliders = document.querySelectorAll('.gallery-sliders');
 
 const images = {
   first: [
-    '../assets/images/gallery/gallery-sec1-1.png',
-    '../assets/images/gallery/gallery-sec1-2.png',
-    '../assets/images/gallery/gallery-sec1-3.png',
-    '../assets/images/gallery/gallery-sec1-4.png',
+    '../assets/images/gallery/gallery-sec1-1.jpg',
+    '../assets/images/gallery/gallery-sec1-2.jpg',
+    '../assets/images/gallery/gallery-sec1-3.jpg',
+    '../assets/images/gallery/gallery-sec1-4.jpg',
   ],
   second: [
     '../assets/images/gallery/gallery-sec2-1.jpg',
@@ -31,6 +32,7 @@ controlsOption.forEach((loopSection, index) => {
 function initActiveSection() {
   activeImages = images.first;
   controlsOption[0].classList.add('active');
+  sliders[0].classList.add('active');
 
   // Устанавливаем картинки
   slideOptions[0]
@@ -53,8 +55,14 @@ function changeSection(section, index) {
       loopSection.classList.remove('active');
     }
   });
+  sliders.forEach(loopSlider => {
+    if (loopSlider.classList.contains('active')) {
+      loopSlider.classList.remove('active');
+    }
+  });
 
   section.classList.add('active');
+  sliders[index].classList.add('active');
   activeImages = Object.values(images)[index];
 
   // Устанавливаем картинки
@@ -73,3 +81,42 @@ function changeSection(section, index) {
 }
 
 initActiveSection();
+
+
+// sliders
+const firstSlider = new Swiper('.gallery__slider_first', {
+  slidesPerView: 1,
+  loop: true,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+  pagination: {
+    el: '.gallery__slider_first__slider-nav',
+    clickable: true,
+  },
+});
+const secondSlider = new Swiper('.gallery__slider_second', {
+  slidesPerView: 1,
+  loop: true,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+  pagination: {
+    el: '.gallery__slider_second__slider-nav',
+    clickable: true,
+  },
+});
+const thirdSlider = new Swiper('.gallery__slider_third', {
+  slidesPerView: 1,
+  loop: true,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+  pagination: {
+    el: '.gallery__slider_third__slider-nav',
+    clickable: true,
+  },
+});

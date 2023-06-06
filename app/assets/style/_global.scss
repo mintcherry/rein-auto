@@ -27,7 +27,12 @@ body {
 }
 
 main {
-  padding-top: 80px;
+  @media screen and (max-width: 602px) {
+    padding-top: 60px;
+  }
+  @media (min-width: 602px) {
+    padding-top: 80px;
+  }
 }
 
 .button {
@@ -85,7 +90,7 @@ main {
   width: fit-content;
   padding: 6px 20px;
   background-color: $red;
-  border-radius: 15px;
+  border-radius: 10px;
 
   @media screen and (max-width: 1024px) {
     padding: 3px 10px;
@@ -112,6 +117,6 @@ main {
   }
 }
 
-.sw-app .sw-review-bottom .sw-swiper-button-arrow-type2:hover{
+.sw-app .sw-review-bottom .sw-swiper-button-arrow-type2:hover {
   background-color: #E30613 !important;
 }

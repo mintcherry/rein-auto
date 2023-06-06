@@ -54,10 +54,6 @@
     background: linear-gradient(90deg, #DC0000 20.83%, #A52727 100%);
     position: absolute;
     top: -10px;
-
-    @media screen and (max-width: 576px) {
-      top: -20px;
-    }
   }
 }
 

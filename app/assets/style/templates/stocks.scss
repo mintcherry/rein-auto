@@ -10,6 +10,7 @@
     justify-content: center;
 
     @media screen and (max-width: 768px) {
+      width: 100%;
       padding-left: 0;
       padding-right: 0;
     }
@@ -24,8 +25,9 @@
 .stocks__top {
   margin-bottom: 50px;
 
-  @media screen and (max-width: 576px) {
-    margin-bottom: 30px;
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    margin: 0 auto 30px;
   }
 }
 
@@ -75,10 +77,6 @@
     background: linear-gradient(90deg, #DC0000 20.83%, #A52727 100%);
     position: absolute;
     top: -10px;
-
-    @media screen and (max-width: 576px) {
-      top: -20px;
-    }
   }
 
   p {
@@ -120,13 +118,20 @@
   @media screen and (max-width: 768px) {
     min-height: 340px;
     height: auto;
-    padding: 15px;
+    padding: 40px 10px;
   }
 
   img {
     position: absolute;
     right: -20px;
     bottom: -10px;
+
+    @media screen and (max-width: 768px) {
+      width: 150px;
+      height: 135px;
+      bottom: 80px;
+      right: 0;
+    }
   }
 }
 
@@ -143,6 +148,11 @@
     @include font(20px, 32px, 500);
     color: $white;
 
+    @include mobile {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
     .label {
       padding: 4px 8px;
       border-radius: 5px;
@@ -157,6 +167,11 @@
   color: $white;
   position: relative;
   z-index: 1;
+
+  @include mobile {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .stocks__option-btn {
@@ -181,7 +196,8 @@
 
   @media screen and (max-width: 768px) {
     max-width: 100%;
-    width: 100%;
+    width: 95%;
     height: 50px;
+    margin: 20px auto 0;
   }
 }

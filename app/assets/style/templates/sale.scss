@@ -2,8 +2,8 @@
   max-width: 1600px;
   margin: -10px auto 0;
   min-height: 390px;
-  padding: 50px 0;
-  background: url(' ../images//inspectors/background.png');
+  padding: 35px 0;
+  background: url('/assets/images/inspectors/background.png') no-repeat;
   background-size: 100% 100%;
   box-sizing: border-box;
   position: relative;
@@ -41,6 +41,10 @@
 
 .sale__title {
   margin-bottom: 40px;
+
+  @include mobile {
+    margin-bottom: 20px;
+  }
 
   p {
     @include font(48px, 56px, 700);
@@ -104,6 +108,10 @@
     margin-bottom: 20px;
     color: $white;
 
+    @include mobile {
+      text-align: center !important;
+    }
+
     &:last-child {
       font-weight: 400;
 
@@ -166,6 +174,13 @@
   @include font(14px, 16px, 400);
   max-width: 345px;
   color: $white;
+  white-space: pre-line;
+
+  @include mobile {
+    font-size: 12px;
+    line-height: 14px;
+    white-space: normal;
+  }
 
   a {
     font-weight: 500;
@@ -197,7 +212,20 @@
     li {
       @include font(18px, 22px, 400);
       color: #F6F5F3;
-      list-style: square;
+      list-style-type: none;
+      position: relative;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        background: #F6F5F3;
+        border-radius: 50%;
+        position: absolute;
+        top: 8px;
+        left: -15px;
+      }
 
       &:not(:last-child) {
         margin-bottom: 10px;
@@ -212,10 +240,6 @@
 
     &:last-child {
       font-weight: 400;
-
-      span {
-        color: $red;
-      }
     }
   }
 }
@@ -231,7 +255,7 @@
   right: 0;
   bottom: -110px;
 
-  @media screen and (max-width: 1024px){
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 }

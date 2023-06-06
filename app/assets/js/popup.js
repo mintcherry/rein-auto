@@ -87,21 +87,33 @@ const categoryPopup = new Popup(categoryPopupEl);
 const messagePopup = new Popup(messagePopupEl);
 
 showPopupButtons.forEach(loopButton => {
-    let dataPopup = loopButton.dataset.popup;
+   loopButton.addEventListener('click', () => {
+       let dataPopup = loopButton.dataset.popup;
 
-    if(dataPopup === 'discount'){
-        discountPopupEl.querySelector('.popup__subtitle').innerHTML = loopButton.dataset.text;
-        discountPopup.ShowPopup();
-        return;
-    }
-    if(dataPopup === 'category'){
-        categoryPopup.ShowPopup();
-        return;
-    }
-    if(dataPopup === 'message'){
-        messagePopup.ShowPopup();
-        return;
-    }
+       if(dataPopup === 'discount'){
+           discountPopupEl.querySelector('.popup__subtitle').innerHTML = loopButton.dataset.text;
+           discountPopup.ShowPopup();
+           return;
+       }
+       if(dataPopup === 'category'){
+           categoryPopup.element.querySelector('.js-set-title').innerHTML = loopButton.dataset.catageory;
+           if (loopButton.dataset.catageory === 'Категория A + A1'){
+               categoryPopup.element.querySelector('.js-set-price').innerHTML = document.getElementById('ATotalPrice').innerHTML;
+           }
+           if (loopButton.dataset.catageory === 'Категория B + B1'){
+               categoryPopup.element.querySelector('.js-set-price').innerHTML = document.getElementById('BTotalPrice').innerHTML;
+           }
+           if (loopButton.dataset.catageory === 'Категория C + C1'){
+               categoryPopup.element.querySelector('.js-set-price').innerHTML = document.getElementById('CTotalPrice').innerHTML;
+           }
+           categoryPopup.ShowPopup();
+           return;
+       }
+       if(dataPopup === 'message'){
+           messagePopup.ShowPopup();
+           return;
+       }
+   })
 })
 
 function updateInputLengthCounter(area, textareaInput){

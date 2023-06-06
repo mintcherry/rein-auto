@@ -172,6 +172,7 @@ ATariff.innerHTML = tariffs[0].totalPrice + ' ₽';
 BTariff.innerHTML = tariffs[1].totalPrice + ' ₽';
 CTariff.innerHTML = tariffs[2].totalPrice + ' ₽';
 
+
 const tariffTabs = document.querySelectorAll('.js-tariff-tab');
 
 

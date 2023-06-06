@@ -2,3 +2,4 @@ node_modules
 
 app/index.html
 app/assets/style/main.css
+dist

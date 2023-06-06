@@ -219,7 +219,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
   @media screen and (max-width: 576px) {
     flex-direction: column;
@@ -248,7 +248,7 @@
 
 .addresses__info-top__desc,
 .addresses__info-bottom__desc {
-  @include font(18px, 20px, 500);
+  @include font(18px, 20px, 400);
   display: inline-block;
   margin-left: 40px;
   color: $red;
@@ -269,13 +269,14 @@
   }
 
   &:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 
 .addresses__info-row__left {
   display: flex;
   align-items: center;
+  max-width: 440px;
 
   @media screen and (max-width: 1024px) {
     margin-bottom: 10px;
@@ -304,6 +305,7 @@
 .addresses__info-row__right {
   @include font(20px, 24px, 500);
   color: $deep-blue;
+  width: 240px;
 
   span {
     @include font(18px, 20px, 400);

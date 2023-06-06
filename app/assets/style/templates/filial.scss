@@ -105,8 +105,8 @@
 }
 
 .filial__form-bottom__description {
-  @include font(14px, 16px, 500);
-  max-width: 330px;
+  @include font(14px, 16px, 400);
+  max-width: 345px;
   color: $white;
 
   @media screen and (max-width: 1024px){
@@ -115,6 +115,7 @@
   }
 
   a {
+    font-weight: 500;
     color: $white;
     text-decoration: underline;
   }

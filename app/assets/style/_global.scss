@@ -7,10 +7,10 @@
 }
 
 body {
-  max-width: 1600px;
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
+  background: #F6F5F3;
 
   &::-webkit-scrollbar {
     width: 4px;
@@ -110,4 +110,8 @@ main {
     @include font(14px, 16px, 300);
     color: #A5A5A5;
   }
+}
+
+.sw-app .sw-review-bottom .sw-swiper-button-arrow-type2:hover{
+  background-color: #E30613 !important;
 }

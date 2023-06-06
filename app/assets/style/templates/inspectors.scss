@@ -1,6 +1,7 @@
 .inspectors {
+  max-width: 1600px;
+  margin: -10px auto 0;
   @include flexCenter;
-  margin-top: -10px;
   padding-top: 50px;
   padding-bottom: 40px;
   position: relative;
@@ -187,6 +188,9 @@
   margin-top: 10px;
   overflow: hidden;
   z-index: 1;
+  &:active{
+    cursor: grabbing;
+  }
   @media screen and (max-width: 1239px) {
     display: none;
   }
@@ -206,7 +210,7 @@
   overflow: hidden;
   cursor: pointer;
   filter: drop-shadow(0px 3.77143px 3.77143px rgba(0, 0, 0, 0.25));
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   transition: 250ms;
 
   img {
@@ -214,14 +218,9 @@
     height: 100%;
     object-fit: cover;
   }
-
-  &:hover {
-    border-color: $red;
-  }
 }
 
 .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-  width: 77px !important;
   bottom: 254px;
   display: none;
   @media screen and (max-width: 1239px) {

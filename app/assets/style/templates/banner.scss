@@ -4,7 +4,7 @@
   position: relative;
   margin-top: -80px;
   padding-top: 170px;
-
+  background: #fff;
   .container {
     @include mobile {
       width: 100%;
@@ -240,7 +240,29 @@
   background-color: #F6F5F3;
   position: relative;
   z-index: 1;
-
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 799px;
+    height: 123px;
+    background: linear-gradient(180deg, rgba(246, 245, 243, 0) 0%, #F6F5F3 69.59%);
+    transform: translate(0, -100%);
+    @media screen and (max-width: 1024px) {
+      content: unset;
+    }
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+    background: #F6F5F3;
+    transform: translate(-50% ,0);
+    z-index: -1;
+  }
   img {
     width: 100%;
     position: absolute;

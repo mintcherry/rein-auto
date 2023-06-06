@@ -4,22 +4,22 @@ let sliders = document.querySelectorAll('.gallery-sliders');
 
 const images = {
   first: [
-    '../assets/images/gallery/gallery-sec1-1.jpg',
-    '../assets/images/gallery/gallery-sec1-2.jpg',
-    '../assets/images/gallery/gallery-sec1-3.jpg',
-    '../assets/images/gallery/gallery-sec1-4.jpg',
+    'assets/images/gallery/gallery-sec1-1.jpg',
+    'assets/images/gallery/gallery-sec1-2.jpg',
+    'assets/images/gallery/gallery-sec1-3.jpg',
+    'assets/images/gallery/gallery-sec1-4.jpg',
   ],
   second: [
-    '../assets/images/gallery/gallery-sec2-1.jpg',
-    '../assets/images/gallery/gallery-sec2-2.jpg',
-    '../assets/images/gallery/gallery-sec2-3.jpg',
-    '../assets/images/gallery/gallery-sec2-4.jpg',
+    'assets/images/gallery/gallery-sec2-1.jpg',
+    'assets/images/gallery/gallery-sec2-2.jpg',
+    'assets/images/gallery/gallery-sec2-3.jpg',
+    'assets/images/gallery/gallery-sec2-4.jpg',
   ],
   third: [
-    '../assets/images/gallery/gallery-sec3-1.jpg',
-    '../assets/images/gallery/gallery-sec3-2.jpg',
-    '../assets/images/gallery/gallery-sec3-3.jpg',
-    '../assets/images/gallery/gallery-sec3-4.jpg',
+    'assets/images/gallery/gallery-sec3-1.jpg',
+    'assets/images/gallery/gallery-sec3-2.jpg',
+    'assets/images/gallery/gallery-sec3-3.jpg',
+    'assets/images/gallery/gallery-sec3-4.jpg',
   ],
 };
 

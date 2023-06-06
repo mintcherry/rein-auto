@@ -1,0 +1,40 @@
+<div class="popup discount-popup">
+    <div class="popup__inner">
+        <div class="close-button"></div>
+        <h2 class="popup__title">Запись в автошколу</h2>
+        <p class="popup__subtitle">записаться в автошколу</p>
+        <form class="popup__form">
+            <div class="popup__form-group">
+                <input type="text" name="fio" class="popup__form-input" placeholder="Имя"/>
+            </div>
+            <div class="popup__form-group">
+                <input type="text" name="phone" class="popup__form-input" placeholder="Номер телефона"/>
+                <div class="sale__form-field__star">*</div>
+            </div>
+           <div class="popup__form-group">
+               <label class="popup__form-label">Удобное время звонка</label>
+               <div class="select-element">
+                   <span class="js-select-current placeholder">9:00 – 10:00</span>
+                   <ul class="select-element__options">
+                       <li data-value="9:00 – 10:00">9:00 – 10:00</li>
+                       <li data-value="10:00 – 11:00">10:00 – 11:00</li>
+                       <li data-value="11:00 – 12:00">11:00 – 12:00</li>
+                       <li data-value="12:00 – 13:00">12:00 – 13:00</li>
+                       <li data-value="13:00 – 14:00">13:00 – 14:00</li>
+                       <li data-value="14:00 – 15:00">14:00 – 15:00</li>
+                       <li data-value="15:00 – 16:00">15:00 – 16:00</li>
+                       <li data-value="16:00 – 17:00">16:00 – 17:00</li>
+                       <li data-value="17:00 – 18:00">17:00 – 18:00</li>
+                   </ul>
+                   <input type="hidden" name="selectName" class="js-select--hidden" value="9:00 – 10:00">
+               </div>
+           </div>
+            <div class="popup__form-bottom">
+                <button class="popup__form-button  btn btn_green">хочу получить права</button>
+                <p class="popup__form-agreement">Нажимая на кнопку, вы даёте согласие
+                    на <a href="#">обработку персональных данных</a>
+                    и соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+            </div>
+        </form>
+    </div>
+</div>

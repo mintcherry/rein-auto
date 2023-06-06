@@ -64,7 +64,7 @@ class Popup {
             setTimeout(() => {
                 this.element.classList.remove('loading');
             }, 400)
-            document.removeEventListener( this.ClosePopup);
+            document.removeEventListener('click', this.ClosePopup);
         }
     }
 }
@@ -82,6 +82,7 @@ let categoryPopupEl = document.querySelector('.category-popup');
 let messagePopupEl = document.querySelector('.message-popup')
 let showPopupButtons = document.querySelectorAll('.js-show-popup');
 let textAreas = document.querySelectorAll('.popup__form-textarea');
+let forms = document.querySelectorAll('form');
 const discountPopup = new Popup(discountPopupEl);
 const categoryPopup = new Popup(categoryPopupEl);
 const messagePopup = new Popup(messagePopupEl);
@@ -98,12 +99,15 @@ showPopupButtons.forEach(loopButton => {
        if(dataPopup === 'category'){
            categoryPopup.element.querySelector('.js-set-title').innerHTML = loopButton.dataset.catageory;
            if (loopButton.dataset.catageory === 'Категория A + A1'){
+               categoryPopup.element.classList.remove('show-options')
                categoryPopup.element.querySelector('.js-set-price').innerHTML = document.getElementById('ATotalPrice').innerHTML;
            }
            if (loopButton.dataset.catageory === 'Категория B + B1'){
+               categoryPopup.element.classList.add('show-options')
                categoryPopup.element.querySelector('.js-set-price').innerHTML = document.getElementById('BTotalPrice').innerHTML;
            }
            if (loopButton.dataset.catageory === 'Категория C + C1'){
+               categoryPopup.element.classList.remove('show-options')
                categoryPopup.element.querySelector('.js-set-price').innerHTML = document.getElementById('CTotalPrice').innerHTML;
            }
            categoryPopup.ShowPopup();
@@ -127,3 +131,13 @@ if(textAreas != null){
         textareaInput.addEventListener('input', () => updateInputLengthCounter(area, textareaInput))
     })
 }
+
+forms.forEach(loopForm => {
+    loopForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        loopForm.innerHTML = '<p class="popup__form-success-title">Спасибо за обращение!</p>\n' +
+            '<p class="popup__form-success-text">Мы свяжемся с вами\n' +
+            ' в удобное для вас время!</p>'
+    })
+})

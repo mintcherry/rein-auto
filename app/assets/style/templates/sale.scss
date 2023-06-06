@@ -252,11 +252,8 @@
 
 .filial__img {
   position: absolute;
-  right: -110px;
+  right: 18px;
   bottom: -126px;
-  @media screen and (max-width: 1440px) {
-    right: 0;
-  }
   @media screen and (max-width: 1024px) {
     display: none;
   }

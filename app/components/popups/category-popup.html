@@ -5,6 +5,23 @@
         <p class="popup__subtitle">запись в автошколу</p>
         <form class="popup__form">
             <div class="popup__form-group">
+                <label class="popup__form-label">Тип обучения</label>
+                <div class="popup__form-group-radio">
+                    <div class="popup__form-input-radio">
+                        <label>
+                            <input type="radio" name="type">
+                            <span>Оффлайн</span>
+                        </label>
+                    </div>
+                    <div class="popup__form-input-radio">
+                        <label>
+                            <input type="radio" name="type" checked>
+                            <span>Онлайн</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="popup__form-group">
                 <input type="text" name="fio" class="popup__form-input" placeholder="Имя"/>
             </div>
             <div class="popup__form-group">
@@ -24,3 +41,4 @@
         </form>
     </div>
 </div>
+

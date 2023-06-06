@@ -1,16 +1,15 @@
 const instructorsThumbs = new Swiper('.inspectors__thumb-slider', {
     loop: true,
-    slidesPerView: 'auto',
+    slidesPerView: 3.3,
     watchSlidesProgress: true,
-    clickable: true,
     spaceBetween: 15,
     slideToClickedSlide: true,
-
 })
 
 const instructorsSLide = new Swiper('.inspectors__content-slider', {
     slidesPerView: 1,
     loop: true,
+    slideToClickedSlide: true,
     effect: 'fade',
     fadeEffect: {
         crossFade: true
@@ -32,3 +31,10 @@ const instructorsSLide = new Swiper('.inspectors__content-slider', {
 
     }
 });
+
+instructorsThumbs.on('slideChangeTransitionEnd', () => {
+    instructorsSLide.slideTo(instructorsThumbs.realIndex)
+})
+instructorsThumbs.on('click', () => {
+    instructorsThumbs.slideTo(instructorsThumbs.clickedIndex)
+})

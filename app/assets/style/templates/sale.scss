@@ -8,7 +8,7 @@
   box-sizing: border-box;
   position: relative;
   z-index: 2;
-
+  border-radius: 20px;
   .container {
     display: flex;
     justify-content: space-between;
@@ -252,9 +252,11 @@
 
 .filial__img {
   position: absolute;
-  right: 0;
-  bottom: -110px;
-
+  right: -110px;
+  bottom: -126px;
+  @media screen and (max-width: 1440px) {
+    right: 0;
+  }
   @media screen and (max-width: 1024px) {
     display: none;
   }

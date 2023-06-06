@@ -11,7 +11,7 @@
     flex-direction: column;
     justify-content: center;
 
-    @media screen and (max-width: 1260px) {
+    @media screen and (max-width: 1239px) {
       width: 100%;
       padding-left: 0;
       padding-right: 0;
@@ -30,7 +30,7 @@
     margin-bottom: 30px;
   }
 
-  @media screen and (max-width: 1260px) {
+  @media screen and (max-width: 1239px) {
     width: 100%;
     margin: 0 auto 30px;
   }
@@ -96,7 +96,7 @@
   grid-gap: 20px;
   height: 680px;
 
-  @media screen and (max-width: 1260px) {
+  @media screen and (max-width: 1239px) {
     display: flex;
     flex-direction: column;
     height: auto;
@@ -115,7 +115,7 @@
   overflow: hidden;
   background: $white;
 
-  @media screen and (max-width: 1260px) {
+  @media screen and (max-width: 1239px) {
     max-width: 100%;
     flex-direction: row;
     border-radius: unset;
@@ -147,7 +147,7 @@
   transition: 250ms;
   cursor: pointer;
 
-  @media screen and (max-width: 1260px) {
+  @media screen and (max-width: 1239px) {
     min-width: 205px;
     height: 105px;
     padding: 10px;
@@ -156,7 +156,7 @@
   &.active {
     border-color: $red;
 
-    @media screen and (max-width: 1260px) {
+    @media screen and (max-width: 1239px) {
       border-left: none;
       border-bottom: 4px solid $red;
     }
@@ -184,7 +184,7 @@
   margin-bottom: 2px;
   color: $deep-blue;
 
-  @media screen and (max-width: 1260px) {
+  @media screen and (max-width: 1239px) {
     font-size: 18px;
     line-height: 18px;
   }
@@ -195,7 +195,7 @@
   max-width: 310px;
   color: #A5A5A5;
 
-  @media screen and (max-width: 1260px) {
+  @media screen and (max-width: 1239px) {
     font-size: 16px;
     line-height: 16px;
   }
@@ -215,7 +215,7 @@
   border-radius: 20px;
   box-shadow: 0 3.97714px 7.95429px rgba(0, 0, 0, 0.05);
 
-  @media screen and (max-width: 1260px) {
+  @media screen and (max-width: 1239px) {
     width: 100%;
     height: auto;
   }
@@ -243,7 +243,7 @@
     flex-direction: column;
   }
 
-  @media screen and (max-width: 1260px) {
+  @media screen and (max-width: 1239px) {
     justify-content: flex-start;
     align-items: start;
     margin-top: 30px;
@@ -341,7 +341,7 @@
   box-shadow: 0 3.97714px 7.95429px rgba(0, 0, 0, 0.05);
   position: relative;
 
-  @media screen and (max-width: 1260px) {
+  @media screen and (max-width: 1239px) {
     width: 100%;
     height: 360px;
   }
@@ -357,7 +357,7 @@
       width: 760px !important;
       height: 100% !important;
 
-      @media screen and (max-width: 1260px) {
+      @media screen and (max-width: 1239px) {
         width: 100% !important;
         height: 360px !important;
       }

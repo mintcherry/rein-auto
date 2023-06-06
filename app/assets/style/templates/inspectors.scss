@@ -8,6 +8,7 @@
   background: url(' ../images//inspectors/background.png');
   background-size: 100% 100%;
   z-index: 10;
+  border-radius: 20px;
   @media screen and (max-width: 1239px) {
     padding: 40px 0 0;
   }
@@ -202,7 +203,6 @@
 }
 
 .inspector__thumb-slide {
-  max-width: 207px;
   width: 100%;
   max-height: 207px;
   height: 100%;

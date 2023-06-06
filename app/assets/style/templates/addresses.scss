@@ -269,15 +269,31 @@
   }
 }
 
-.addresses__info-row {
-  display: flex;
-  justify-content: space-between;
+.addresses__content-wrapper {
+  @include flexBetween;
   align-items: center;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 768px) {
+    align-items: flex-start;
     flex-direction: column;
-    align-items: start;
   }
+}
+
+.addresses__info-left,
+.addresses__info-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.addresses__info-left {
+  @media screen and (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+}
+
+.addresses__info-row {
+  display: flex;
+  align-items: center;
 
   &:not(:last-child) {
     margin-bottom: 20px;
@@ -319,7 +335,7 @@
   }
 }
 
-.addresses__info-row__right {
+.addresses__info-right__description {
   @include font(20px, 24px, 500);
   color: $deep-blue;
   width: 250px;
@@ -327,6 +343,10 @@
   span {
     @include font(18px, 20px, 400);
     color: $red;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
 
@@ -339,6 +359,8 @@
   height: 290px;
   background: $white;
   box-shadow: 0 3.97714px 7.95429px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
   position: relative;
 
   @media screen and (max-width: 1239px) {
@@ -349,8 +371,6 @@
   #address-map {
     width: 100%;
     height: 100%;
-    border-radius: 20px;
-    overflow: hidden;
     pointer-events: none;
 
     .ymaps-2-1-79-map {

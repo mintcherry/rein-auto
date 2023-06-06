@@ -9,6 +9,7 @@
   position: relative;
   z-index: 2;
   border-radius: 20px;
+
   .container {
     @media screen and (max-width: 1024px) {
       padding-left: 0;
@@ -62,11 +63,11 @@
   display: grid;
   grid-template-columns: repeat(2, 325px);
   grid-gap: 10px;
-  
+
   @media screen and (max-width: 576px) {
     grid-template-columns: 1fr;
   }
-  
+
   @media (min-width: 576px) and (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -84,11 +85,21 @@
   }
 }
 
+.filial__img {
+  position: absolute;
+  right: -20px;
+  bottom: -126px;
+
+  @media screen and (max-width: 1080px) {
+    display: none;
+  }
+}
+
 .filial__form-bottom {
   display: flex;
   align-items: center;
   margin-top: 20px;
-  
+
   @media screen and (max-width: 576px) {
     flex-direction: column;
   }
@@ -116,7 +127,7 @@
     white-space: normal;
   }
 
-  @media screen and (max-width: 1024px){
+  @media screen and (max-width: 1024px) {
     max-width: 100%;
     margin-top: 10px;
   }
